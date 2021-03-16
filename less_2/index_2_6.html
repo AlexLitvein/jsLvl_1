@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict"
+        // 0,5,6,7,8,9 - рублей
+        // 1 - рубль
+        // 2,3,4 - рубля
+        function getRubStr(sum) {  
+            let result = 'рублей';          
+            let lastNum = +sum[sum.length - 1]; 
+
+            if (lastNum === 1) {
+                result = 'рубль';
+            }
+            if (lastNum >1 && lastNum <5) {
+                result = 'рубля';
+            }
+            return result;
+        }
+
+        let sum = prompt('Введите сумму которую вы хотите положить на счет');
+        let rubStr = getRubStr(sum);
+        alert(`Ваша сумма в ${sum} ${rubStr} успешно зачислена.`);
+
+    </script>
+</body>
+
+</html>
