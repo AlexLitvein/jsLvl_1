@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict"
+        let a = 2;
+        // сначала вычисляется выражение в круглых скобках(высший приоритет) 
+        // значение переменной а умножается на 2, результат присваивается переменной а получаем а = 4
+        // к 1-це прибавляется значение переменной а получаем 5
+        // переменной х присваивается значение предыдущего выражения
+        // итого а = 4, х = 5
+        let x = 1 + (a *= 2);
+        console.log(`a = ${a}, x = ${x}`);
+
+    </script>
+</body>
+
+</html>
