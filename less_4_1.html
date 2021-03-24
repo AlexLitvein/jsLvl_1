@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict"
+        function splitNum(num) {
+            const o = {};
+            if (Number.isInteger(num)) {
+                if (num >= 0 && num <= 999) {
+                    o.units = num % 10;
+                    o.tens = Math.floor((num % 100) / 10);
+                    o.hundreds = Math.floor(num / 100);
+                }
+            }
+            return o;
+        }
+
+        const num = +prompt("Введите число в диапазоне [0, 999]");
+        console.log(num);
+        console.log(splitNum(num));
+
+    </script>
+</body>
+
+</html>
